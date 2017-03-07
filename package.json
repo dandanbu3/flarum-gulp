@@ -1,0 +1,74 @@
+{
+  "_args": [
+    [
+      "flarum-gulp@git+https://github.com/flarum/gulp.git",
+      "/home/vagrant/Code/flarum/vendor/flarum/core/js/forum"
+    ]
+  ],
+  "_from": "git+https://github.com/flarum/gulp.git",
+  "_id": "flarum-gulp@0.1.7",
+  "_inCache": true,
+  "_location": "/flarum-gulp",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/flarum/gulp/master/package.json",
+      "gitUrl": "git://github.com/flarum/gulp.git",
+      "httpsUrl": "git+https://github.com/flarum/gulp.git",
+      "shortcut": "github:flarum/gulp",
+      "ssh": "git@github.com:flarum/gulp.git",
+      "sshUrl": "git+ssh://git@github.com/flarum/gulp.git",
+      "type": "github"
+    },
+    "name": "flarum-gulp",
+    "raw": "flarum-gulp@git+https://github.com/flarum/gulp.git",
+    "rawSpec": "git+https://github.com/flarum/gulp.git",
+    "scope": null,
+    "spec": "git+https://github.com/flarum/gulp.git",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git+https://github.com/flarum/gulp.git#2028113acaf4c69b45fe87bb677929fbceaa9979",
+  "_shasum": "7d3db050e64ea6a3dfccbc9459955a680bcb78f0",
+  "_shrinkwrap": null,
+  "_spec": "flarum-gulp@git+https://github.com/flarum/gulp.git",
+  "_where": "/home/vagrant/Code/flarum/vendor/flarum/core/js/forum",
+  "author": {
+    "email": "toby.zerner@gmail.com",
+    "name": "Toby Zerner",
+    "url": "http://tobyzerner.com"
+  },
+  "bugs": {
+    "url": "https://github.com/flarum/flarum-gulp/issues"
+  },
+  "dependencies": {
+    "babel-plugin-object-assign": "^1.2.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-cached": "^1.0.4",
+    "gulp-concat": "^2.5.2",
+    "gulp-order": "^1.1.1",
+    "gulp-remember": "^0.3.0",
+    "streamqueue": "^0.1.3"
+  },
+  "description": "Gulp wrapper for Flarum JavaScript compilation.",
+  "devDependencies": {},
+  "gitHead": "2028113acaf4c69b45fe87bb677929fbceaa9979",
+  "homepage": "https://github.com/flarum/flarum-gulp",
+  "installable": true,
+  "license": "MIT",
+  "main": "index.js",
+  "name": "flarum-gulp",
+  "optionalDependencies": {},
+  "readme": "**Gulp wrapper for Flarum JavaScript compilation.**\n\nThis package sets up a [Gulp](http://gulpjs.com/) program that compiles JavaScript for use in Flarum. Example usage:\n\n```js\n// Gulpfile.js\nvar gulp = require('flarum-gulp');\n\ngulp({\n  files: [\n    'bower_components/foo/bar.js'\n  ],\n  modules: {\n    'vendor/package': 'src/**/*.js'\n  }\n});\n```\n\n```bash\n$ gulp         # compile\n$ gulp watch   # compile and watch for changes\n```\n\n## Options\n\n* `files` An array of individual files to concatenate.\n* `modules` A map of module prefixes to their source files.\n    * Modules are transpiled to ES5 using Babel, including `Object.assign`.\n    * JSX is converted into Mithril's `m` syntax.\n* `outputFile` The resulting file to write to. Defaults to `dist/extension.js`.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flarum/flarum-gulp.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.7"
+}
